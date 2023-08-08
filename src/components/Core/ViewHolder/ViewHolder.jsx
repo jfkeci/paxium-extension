@@ -1,6 +1,8 @@
+import Login from "../../../views/Login";
 import Tasks from "../../../views/Tasks";
-import Dashboard from "../../../views/Dashboard";
+import Register from "../../../views/Register";
 import Pomodorro from "../../../views/Pomodorro";
+import Dashboard from "../../../views/Dashboard";
 import { navigationStore } from "../../../store/navigation.store";
 
 export default function ViewHolder() {
@@ -14,6 +16,10 @@ export default function ViewHolder() {
         return <Pomodorro />;
       case "Tasks":
         return <Tasks />;
+      case "Login":
+        return <Login />;
+      case "Register":
+        return <Register />;
       default:
         return <Dashboard />;
     }
