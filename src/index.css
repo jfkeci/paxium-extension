@@ -19,14 +19,7 @@
 }
 
 body {
-  margin: 0;
   min-width: 600px;
   min-height: 400px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-}
