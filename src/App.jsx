@@ -1,4 +1,4 @@
-import "./App.css";
+/* import Navbar from "./components/Core/Navbar/Navbar"; */
 import Sidebar from "./components/Core/Sidebar/Sidebar";
 import ViewHolder from "./components/Core/ViewHolder/ViewHolder";
 
@@ -7,7 +7,8 @@ function App() {
     <div>
       <Sidebar />
 
-      <div>
+      <div className="pl-40">
+        {/* <Navbar /> */}
         <ViewHolder />
       </div>
     </div>
