@@ -1,19 +1,19 @@
 import Login from "../../../views/Login";
 import Tasks from "../../../views/Tasks";
+import CheckIn from "../../../views/CheckIn";
 import Register from "../../../views/Register";
-import Pomodorro from "../../../views/Pomodorro";
 import Dashboard from "../../../views/Dashboard";
-import { navigationStore } from "../../../store/navigation.store";
+import { viewStore } from "../../../store/view.store";
 
 export default function ViewHolder() {
-  const { currentView } = navigationStore();
+  const { currentView } = viewStore();
 
   const renderView = () => {
     switch (currentView) {
       case "Dashboard":
         return <Dashboard />;
-      case "Pomodorro":
-        return <Pomodorro />;
+      case "CheckIn":
+        return <CheckIn />;
       case "Tasks":
         return <Tasks />;
       case "Login":
