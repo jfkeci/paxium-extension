@@ -1,29 +1,29 @@
-import Login from "../../../views/Login";
-import Tasks from "../../../views/Tasks";
-import CheckIn from "../../../views/CheckIn";
-import Register from "../../../views/Register";
-import Dashboard from "../../../views/Dashboard";
-import { viewStore } from "../../../store/view.store";
+import Login from '../../../views/Login';
+import Tasks from '../../../views/Tasks';
+import CheckIn from '../../../views/CheckIn';
+import Register from '../../../views/Register';
+import Dashboard from '../../../views/Dashboard';
+import { viewStore } from '../../../store/view.store';
 
 export default function ViewHolder() {
   const { currentView } = viewStore();
 
   const renderView = () => {
     switch (currentView) {
-      case "Dashboard":
+      case 'Dashboard':
         return <Dashboard />;
-      case "CheckIn":
+      case 'CheckIn':
         return <CheckIn />;
-      case "Tasks":
+      case 'Tasks':
         return <Tasks />;
-      case "Login":
+      case 'Login':
         return <Login />;
-      case "Register":
+      case 'Register':
         return <Register />;
       default:
         return <Dashboard />;
     }
   };
 
-  return <div>{renderView()}</div>;
+  return <div className="view-holder">{renderView()}</div>;
 }
