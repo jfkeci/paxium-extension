@@ -1,5 +1,5 @@
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 /* CheckInNoteEditorProps {
   config: {
@@ -13,6 +13,13 @@ export default function CheckInNoteEditor(props) {
   const config = { ...props.config };
 
   return (
-    <ReactQuill theme="snow" value={config.value} onChange={config.onUpdate} />
+    <div>
+      <ReactQuill
+        theme="snow"
+        value={config.value}
+        onChange={config.onUpdate}
+        style={{ height: '250px', width: '400px' }}
+      />
+    </div>
   );
 }
