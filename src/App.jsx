@@ -1,6 +1,5 @@
-/* import Navbar from "./components/Core/Navbar/Navbar"; */
-import Sidebar from "./components/Core/Sidebar/Sidebar";
-import ViewHolder from "./components/Core/ViewHolder/ViewHolder";
+import Sidebar from './components/Core/Sidebar/Sidebar';
+import ViewHolder from './components/Core/ViewHolder/ViewHolder';
 
 function App() {
   return (
@@ -8,7 +7,6 @@ function App() {
       <Sidebar />
 
       <div className="pl-40">
-        {/* <Navbar /> */}
         <ViewHolder />
       </div>
     </div>
