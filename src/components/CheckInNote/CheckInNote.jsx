@@ -1,27 +1,26 @@
-import Joi from "joi";
-import { useState } from "react";
-import CheckInNoteEditor from "./CheckInNoteEditor";
-import ValidationInput from "../Shared/ValidationInput";
+import Joi from 'joi';
+import { useState } from 'react';
+import CheckInNoteEditor from './CheckInNoteEditor';
+import ValidationInput from '../Shared/ValidationInput';
 
 export default function CheckInNote() {
   const [checkInNote, setCheckInNote] = useState({
     template: null,
-    title: "",
-    body: "",
+    title: '',
+    body: '',
   });
 
   return (
     <div>
       <ValidationInput
         config={{
-          type: "text",
-          label: "Title",
-          property: "title",
+          type: 'text',
+          property: 'title',
           value: checkInNote.title,
-          placeholder: "Note title",
+          placeholder: 'Note title',
           onUpdate: (newValue) => {
             setCheckInNote((prevData) => {
-              console.log("checkInNote", checkInNote);
+              console.log('checkInNote', checkInNote);
               return { ...prevData, title: newValue };
             });
           },
@@ -34,7 +33,6 @@ export default function CheckInNote() {
           value: checkInNote.body,
           onUpdate: (newValue) => {
             setCheckInNote((prevData) => {
-              console.log("checkInNote", checkInNote);
               return { ...prevData, body: newValue };
             });
           },
