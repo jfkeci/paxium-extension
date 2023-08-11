@@ -23,5 +23,5 @@ body {
 }
 
 .view-holder {
-  overflow-y: hidden;
+  overflow-y: auto;
 }
