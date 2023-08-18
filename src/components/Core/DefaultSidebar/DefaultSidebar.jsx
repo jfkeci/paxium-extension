@@ -2,17 +2,17 @@ import {
   BsClockFill,
   BsFillHddStackFill,
   BsFillClipboard2PulseFill,
-} from "react-icons/bs";
-import { FaRegUser, FaSignInAlt } from "react-icons/fa";
-import { viewStore } from "../../../store/view.store";
+} from 'react-icons/bs';
+import { viewStore } from '../../../store/view.store';
+import { FaRegUser, FaSignInAlt } from 'react-icons/fa';
 
-export default function Sidebar() {
+export default function DefaultSidebar() {
   const { setView } = viewStore();
 
   return (
     <aside
       id="default-sidebar"
-      aria-label="Sidebar"
+      aria-label="DefaultSidebar"
       className="fixed top-0 left-0 z-40 w-40 h-screen transition-transform sm:translate-x-0"
     >
       <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
@@ -20,7 +20,7 @@ export default function Sidebar() {
           <li>
             <button
               className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              onClick={() => setView("Dashboard")}
+              onClick={() => setView('Dashboard')}
             >
               <BsFillClipboard2PulseFill size={25} />
               <span className="ml-3">Dashboard</span>
@@ -29,7 +29,7 @@ export default function Sidebar() {
           <li>
             <button
               className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              onClick={() => setView("CheckIn")}
+              onClick={() => setView('CheckIn')}
             >
               <BsClockFill size={25} />
               <span className="flex-1 ml-3 whitespace-nowrap">Check In</span>
@@ -41,7 +41,7 @@ export default function Sidebar() {
           <li>
             <button
               className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              onClick={() => setView("Tasks")}
+              onClick={() => setView('Tasks')}
             >
               <BsFillHddStackFill size={25} />
               <span className="flex-1 ml-3 whitespace-nowrap">Tasks</span>
@@ -52,7 +52,7 @@ export default function Sidebar() {
           </li>
           <li>
             <button
-              onClick={() => setView("Login")}
+              onClick={() => setView('Login')}
               className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
               <FaSignInAlt size={25} />
@@ -61,7 +61,7 @@ export default function Sidebar() {
           </li>
           <li>
             <button
-              onClick={() => setView("Register")}
+              onClick={() => setView('Register')}
               className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
               <FaRegUser size={25} />

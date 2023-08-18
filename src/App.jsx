@@ -1,10 +1,10 @@
-import Sidebar from './components/Core/Sidebar/Sidebar';
 import ViewHolder from './components/Core/ViewHolder/ViewHolder';
+import DefaultSidebar from './components/Core/DefaultSidebar/DefaultSidebar';
 
 function App() {
   return (
     <div>
-      <Sidebar />
+      <DefaultSidebar />
 
       <div className="pl-40">
         <ViewHolder />
