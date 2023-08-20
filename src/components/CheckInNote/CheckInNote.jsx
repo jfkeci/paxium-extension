@@ -12,6 +12,14 @@ export default function CheckInNote() {
     body: '',
   });
 
+  const saveCheckInNote = () => {
+    console.log(checkInNote);
+
+    /**
+     * Use zustand store to save the note
+     */
+  };
+
   return (
     <div>
       <div className="grid grid-cols-6 gap-2">
@@ -34,7 +42,7 @@ export default function CheckInNote() {
         </div>
         <div>
           <Button.Group className="mt-2">
-            <Button color="gray" size="lg">
+            <Button color="gray" size="lg" onClick={() => saveCheckInNote()}>
               <FaFloppyDisk />
             </Button>
             <Dropdown color="gray" size="lg">
@@ -54,6 +62,8 @@ export default function CheckInNote() {
             setCheckInNote((prevData) => {
               return { ...prevData, body: newValue };
             });
+
+            saveCheckInNote();
           },
         }}
       />
